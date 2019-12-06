@@ -1,0 +1,35 @@
+NUll safe operators:-
+Val name: String? = null or "Hello"
+1)Safe Call(?.):
+   Returns the length if 'name' is not null else returns NULL
+   Use it if you don't mind getting NULL value
+   println("The length of name is ${name?.length}")
+
+2)Safe Call with let (?.let)
+   It executes the block ONLY if name is NOT NULL
+   name?.let{
+       println("The length of name is ${name.length}")
+   }
+
+3)Elvis-operator (?:)
+   When we have nullable reference 'name', we can say "if name is not null",use it, otherwise use some non-null value.
+
+   val length = name?.length ?: -1
+   println("The length of name is ${length}")
+
+4)Non-null assertion operator(!!)
+   Use it when you are sure the value is NOT NULL
+   Throws NullPointerException if the value is found to be NULL
+  
+   println("The length of name is ${name!!.length}")
+
+
+5)lateinit keyword:
+   1)This is used only with mutable data type(var)
+   2)This is used only with non-nullable data type
+   3)This values must be initialised before you use it
+
+
+
+course : https://www.youtube.com/watch?v=HbXiKWHpAto 
+git repo: https://github.com/mitchtabian/Open-API-Android-App
